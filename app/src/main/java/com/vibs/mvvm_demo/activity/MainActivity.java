@@ -1,11 +1,12 @@
-package com.vibs.mvvm_demo;
+package com.vibs.mvvm_demo.activity;
 
-import android.databinding.DataBindingComponent;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.vibs.mvvm_demo.R;
 import com.vibs.mvvm_demo.commands.UserLogin;
 import com.vibs.mvvm_demo.databinding.ActivityMainBinding;
 import com.vibs.mvvm_demo.model.User;
@@ -26,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding.setLoginEvent(new UserLogin() {
             @Override
             public void userLoginEvent() {
-                Toast.makeText(MainActivity.this,activityMainBinding.getLogin().getUserName(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this,activityMainBinding.getLogin().getUserName(),Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this,RecyclerViewDemo.class);
+                startActivity(intent);
             }
         });
 

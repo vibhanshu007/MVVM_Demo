@@ -21,7 +21,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_margin="8dp"
-        tools:context=".MainActivity">
+        tools:context=".activity.MainActivity">
 
         <EditText
             android:id="@+id/et_email_id"
