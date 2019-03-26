@@ -26,7 +26,7 @@ public class RecyclerViewDemo extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         newsModelList = new ArrayList<>();
 
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(newsModelList);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(newsModelList,this);
         recyclerView.setAdapter(recyclerViewAdapter);
         setData();
     }

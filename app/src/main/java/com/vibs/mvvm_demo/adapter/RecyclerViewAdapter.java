@@ -1,11 +1,14 @@
 package com.vibs.mvvm_demo.adapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.vibs.mvvm_demo.commands.RecyclerViewOnItemClick;
 import com.vibs.mvvm_demo.databinding.NewsBinding;
 import com.vibs.mvvm_demo.viewModel.NewsModel;
 
@@ -15,9 +18,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private List<NewsModel> newsList;
     private LayoutInflater layoutInflater;
+    private Context context;
 
-    public RecyclerViewAdapter(List<NewsModel> newsList) {
+    public RecyclerViewAdapter(List<NewsModel> newsList,Context context) {
         this.newsList = newsList;
+        this.context = context;
     }
 
     @NonNull
@@ -38,6 +43,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         NewsModel newsModel = newsList.get(i);
         customAdapter.bind(newsModel);
+        customAdapter.newsBinding.setLoginEvent(new RecyclerViewOnItemClick() {
+            @Override
+            public void recyclerViewOnItemClick(NewsModel newsModel) {
+                Toast.makeText(context, "You clicked " + newsModel.title,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -47,7 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class CustomAdapter extends RecyclerView.ViewHolder {
 
-        NewsBinding newsBinding;
+        public NewsBinding newsBinding;
 
         public CustomAdapter(NewsBinding newsBinding) {
             super(newsBinding.getRoot());
@@ -56,6 +69,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public void bind(NewsModel newsModel){
             this.newsBinding.setNewsView(newsModel);
+            newsBinding.executePendingBindings();
+        }
+
+        public void recyclerViewOnItemClick(NewsModel newsModel){
+            Toast.makeText(context, "You clicked " + newsModel.title,
+                    Toast.LENGTH_LONG).show();
         }
 
         public NewsBinding getNewsBinding(){

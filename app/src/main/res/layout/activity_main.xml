@@ -23,6 +23,12 @@
         android:layout_margin="8dp"
         tools:context=".activity.MainActivity">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{login.userName}"
+            android:layout_margin="50dp"/>
+
         <EditText
             android:id="@+id/et_email_id"
             android:layout_width="match_parent"

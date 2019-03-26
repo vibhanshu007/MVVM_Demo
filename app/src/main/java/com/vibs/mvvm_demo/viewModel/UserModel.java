@@ -1,9 +1,11 @@
 package com.vibs.mvvm_demo.viewModel;
 
 import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 
 import com.vibs.mvvm_demo.R;
 import com.vibs.mvvm_demo.model.User;
+import com.vibs.mvvm_demo.BR;
 
 public class UserModel extends BaseObservable {
 
@@ -17,13 +19,14 @@ public class UserModel extends BaseObservable {
         this.passwordHint = user.passwordHint;
     }
 
+    @Bindable
     public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
-        notifyPropertyChanged(R.id.et_email_id);
+        notifyPropertyChanged(BR.userName);
     }
 
     public String getPassword() {
