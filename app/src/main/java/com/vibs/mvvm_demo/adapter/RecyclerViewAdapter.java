@@ -43,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         NewsModel newsModel = newsList.get(i);
         customAdapter.bind(newsModel);
-        customAdapter.newsBinding.setLoginEvent(new RecyclerViewOnItemClick() {
+        customAdapter.newsBinding.setNewsDetail(new RecyclerViewOnItemClick() {
             @Override
             public void recyclerViewOnItemClick(NewsModel newsModel) {
                 Toast.makeText(context, "You clicked " + newsModel.title,

@@ -56,5 +56,56 @@ public class RecyclerViewDemo extends AppCompatActivity {
         newsModel5.title = "Title 5";
         newsModel5.description = "Description 5";
         newsModelList.add(newsModel5);
+
+        NewsModel newsModel6 = new NewsModel();
+        newsModel6.title = "Title 6";
+        newsModel6.description = "Description 6";
+        newsModelList.add(newsModel6);
+
+        NewsModel newsModel7 = new NewsModel();
+        newsModel7.title = "Title 7";
+        newsModel7.description = "Description 7";
+        newsModelList.add(newsModel7);
+
+        NewsModel newsModel8 = new NewsModel();
+        newsModel8.title = "Title 8";
+        newsModel8.description = "Description 8";
+        newsModelList.add(newsModel8);
+
+        NewsModel newsModel9 = new NewsModel();
+        newsModel9.title = "Title 9";
+        newsModel9.description = "Description 9";
+        newsModelList.add(newsModel9);
+
+        NewsModel newsModel10 = new NewsModel();
+        newsModel10.title = "Title 10";
+        newsModel10.description = "Description 10";
+        newsModelList.add(newsModel10);
+
+        NewsModel newsModel11 = new NewsModel();
+        newsModel11.title = "Title 11";
+        newsModel11.description = "Description 11";
+        newsModelList.add(newsModel11);
+
+        NewsModel newsModel12 = new NewsModel();
+        newsModel12.title = "Title 12";
+        newsModel12.description = "Description 12";
+        newsModelList.add(newsModel12);
+
+        NewsModel newsModel13 = new NewsModel();
+        newsModel13.title = "Title 13";
+        newsModel13.description = "Description 13";
+        newsModelList.add(newsModel13);
+
+        NewsModel newsModel14 = new NewsModel();
+        newsModel14.title = "Title 14";
+        newsModel14.description = "Description 14";
+        newsModelList.add(newsModel14);
+
+        NewsModel newsModel15 = new NewsModel();
+        newsModel15.title = "Title 15";
+        newsModel15.description = "Description 15";
+        newsModelList.add(newsModel15);
+
     }
 }

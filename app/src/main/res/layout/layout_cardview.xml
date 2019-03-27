@@ -9,7 +9,7 @@
             type="com.vibs.mvvm_demo.viewModel.NewsModel"/>
 
         <variable
-            name="loginEvent"
+            name="newsDetail"
             type="com.vibs.mvvm_demo.commands.RecyclerViewOnItemClick"/>
 
     </data>
@@ -21,7 +21,7 @@
         android:layout_marginStart="@dimen/five_dp"
         android:layout_marginTop="@dimen/five_dp"
         android:layout_marginEnd="@dimen/five_dp"
-        android:onClick="@{(v)->loginEvent.recyclerViewOnItemClick(newsView)}">
+        android:onClick="@{(v)->newsDetail.recyclerViewOnItemClick(newsView)}">
 
         <LinearLayout
             android:layout_width="match_parent"
