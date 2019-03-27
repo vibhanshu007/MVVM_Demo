@@ -4,22 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.Observable;
-import android.databinding.ObservableInt;
-import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.vibs.mvvm_demo.BR;
 import com.vibs.mvvm_demo.R;
-import com.vibs.mvvm_demo.activity.MainActivity;
 import com.vibs.mvvm_demo.activity.RecyclerViewDemo;
 import com.vibs.mvvm_demo.model.LoginResponse;
 import com.vibs.mvvm_demo.model.User;
 import com.vibs.mvvm_demo.network.ApiInterface;
 import com.vibs.mvvm_demo.network.ApiUtil;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
